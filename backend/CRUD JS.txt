@@ -1,0 +1,51 @@
+GET - Listar todos problemas
+
+fetch("/api/problemas")
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.error("Erro no GET:", err));
+
+-----------------------------------------------------------------------------------------------------------
+
+POST - Novo Problema
+
+fetch("http://52.72.22.41/problemas", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    titulo: "Exemplo via console",
+    descricao: "Problema criado via DevTools",
+    categoria: "Infraestrutura",
+    endereco: "Rua X, nº 123",
+    status: "aguardando análise"
+  })
+})
+  .then(res => res.json())
+  .then(console.log)
+  .catch(console.error);
+
+-----------------------------------------------------------------------------------------------------------
+
+PUT
+
+fetch("http://52.72.22.41/problemas/1", {
+  method: "PUT",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    status: "resolvido"
+  })
+})
+  .then(res => res.json())
+  .then(console.log)
+  .catch(console.error);
+
+-----------------------------------------------------------------------------------------------------------
+
+DELETE
+
+fetch("http://52.72.22.41/problemas/1", {
+  method: "DELETE"
+})
+  .then(() => console.log("Deletado com sucesso"))
+  .catch(console.error);
+

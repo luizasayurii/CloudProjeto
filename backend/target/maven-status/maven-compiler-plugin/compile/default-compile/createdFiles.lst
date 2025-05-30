@@ -1,0 +1,7 @@
+br\com\cidadao\backend\controller\ProblemaController.class
+br\com\cidadao\backend\model\Usuario.class
+br\com\cidadao\backend\repository\UsuarioRepository.class
+br\com\cidadao\backend\model\Problema.class
+br\com\cidadao\backend\BackendApplication.class
+br\com\cidadao\backend\repository\ProblemaRepository.class
+br\com\cidadao\backend\controller\UsuarioController.class
